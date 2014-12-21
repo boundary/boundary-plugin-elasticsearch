@@ -1,0 +1,144 @@
+{
+    "result": [
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Completion Size",
+            "displayNameShort": "ElSearch - Compl Sz",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_COMPLETION_SIZE",
+            "unit": "bytecount"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Document Count",
+            "displayNameShort": "ElSearch - Doc Cnt",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_DOCUMENT_COUNT",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Field Data Evictions",
+            "displayNameShort": "ElSearch - FldDt Evc",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_FIELDDATA_EVICTIONS",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Field Data Memory Size",
+            "displayNameShort": "ElSearch - FldDt Mem",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE",
+            "unit": "bytecount"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Filter Cache Evictions",
+            "displayNameShort": "ElSearch - FltCh Evc",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Filter Cache Memory Size",
+            "displayNameShort": "ElSearch - FltCh Mem",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE",
+            "unit": "bytecount"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - ID Cache Memory Size",
+            "displayNameShort": "ElSearch - IDCh Mem",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE",
+            "unit": "bytecount"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Index Count",
+            "displayNameShort": "ElSearch - Indx Cnt",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_INDEX_COUNT",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Node Count",
+            "displayNameShort": "ElSearch - Node Cnt",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_NODE_COUNT",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Primary Shards",
+            "displayNameShort": "ElSearch - Prm Shard",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_PRIMARY_SHARDS",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Segment Count",
+            "displayNameShort": "ElSearch - Segm Cnt",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_SEGMENT_COUNT",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Status",
+            "displayNameShort": "ElSearch - Clus Stat",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_STATUS",
+            "unit": "number"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Store Size",
+            "displayNameShort": "ElSearch - Store Sz",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_STORE_SIZE",
+            "unit": "bytecount"
+        },
+        {
+            "defaultAggregate": "avg",
+            "defaultResolutionMS": 1000,
+            "description": "",
+            "displayName": "Elasticsearch - Total Shards",
+            "displayNameShort": "ElSearch - Tot Shard",
+            "isDisabled": 0,
+            "name": "ELASTIC_SEARCH_TOTAL_SHARDS",
+            "unit": "number"
+        }
+    ]
+}
