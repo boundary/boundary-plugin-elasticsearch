@@ -1,26 +1,19 @@
-local framework = require('framework')
-local Plugin = framework.Plugin
+local framework            = require('framework')
+local url                  = require('url')
+local table                = require('table')
+local json                 = require('json')
+local Plugin               = framework.Plugin
+local pack                 = framework.util.pack
 local WebRequestDataSource = framework.WebRequestDataSource
-local Accumulator = framework.Accumulator
-local Cache = framework.Cache
-local url = require('url')
-local auth = framework.util.auth
-local parseCSV = framework.string.parseCSV
-local table = require('table')
-local indexOf = framework.table.indexOf
-local pack = framework.util.pack
-local json = require('json')
-
-local params = framework.params
-params.pollInterval = params.pollInterval and tonumber(params.pollInterval)*1000 or 1000
-params.name = 'Boundary Plugin Elasticsearch'
-params.version = '2.0'
-params.tags = 'elasticsearch'
-
-local options = url.parse(params.url)
-options.wait_for_end = false
-local cache = Cache:new(function () return Accumulator:new() end)
-local ds = WebRequestDataSource:new(options)
+local Cache                = framework.Cache
+local params               = framework.params
+params.pollInterval        = params.pollInterval and tonumber(params.pollInterval)*1000 or 1000
+params.name                = 'Boundary Plugin Elasticsearch'
+params.version             = '2.0'
+params.tags                = 'elasticsearch'
+local options              = url.parse(params.url)
+options.wait_for_end       = false
+local ds                   = WebRequestDataSource:new(options)
 
 
 local plugin = Plugin:new(params, ds)
