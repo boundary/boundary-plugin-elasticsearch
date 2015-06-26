@@ -36,6 +36,13 @@
             "name" : "source",
             "description" : "The Source to display in the legend for the metrics data.  It will default to the hostname of the server",
             "type" : "string"
+        },
+        {
+            "title": "Poll Interval (ms)",
+            "name": "pollInterval",
+            "description": "How often should the plugin poll (in milliseconds) for metrics.",
+            "type" : "integer",
+            "default" : 1000 
         }
     ]
 }
