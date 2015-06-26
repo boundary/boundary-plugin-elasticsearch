@@ -53,6 +53,5 @@ docs/_build/
 # PyBuilder
 target/
 
-param.json
 reports.log
 deploy_plugin.cmd
