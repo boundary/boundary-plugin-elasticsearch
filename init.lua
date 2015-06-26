@@ -19,6 +19,7 @@ local json = require('json')
 local Plugin = framework.Plugin
 local WebRequestDataSource = framework.WebRequestDataSource
 local pack = framework.util.pack
+local notEmpty = framework.string.notEmpty
 
 local params = framework.params
 params.pollInterval = notEmpty(params.pollInterval, 1000)
