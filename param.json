@@ -1,0 +1,5 @@
+{
+	"source" : "Development Host",
+	"stats_url" : "http://127.0.0.1:9200/_cluster/stats",
+	"pollInterval" : 1000
+}
