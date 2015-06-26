@@ -31,10 +31,14 @@ local ds = WebRequestDataSource:new(options)
 local plugin = Plugin:new(params, ds)
 function plugin:onParseValues(data, extra)
   if not isHttpSuccess(extra.status_code) then
-    self:emitEvent('error', ('Http response status code %s instead of OK. Please check your elasetich endpoint configuration.'):format(extra.status_code))
+    self:emitEvent('error', ('Http response status code %s instead of OK. Please check your elasticsearch endpoint configuration.'):format(extra.status_code))
     return
   end
-  local parsed = json.parse(data)
+  local success, parsed = pcall(json.parse, data)
+  if not success then
+    self:emitEvent('error', 'Could not parse metrics. Please check your elasticsearch endpoint configuration.')
+    return
+  end
 
   local result = {}
   result['ELASTIC_SEARCH_STATUS'] = ((parsed.status == 'green') and 1) or 0
