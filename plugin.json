@@ -1,5 +1,12 @@
 {
+    "name" : "Boundary Elastichsearch Plugin",
+    "version" : "0.9.1",
+    "meterVersionRequired" : "4.2.0-611",
+    "unsupportedPlatforms" : [ ],
+    "tags" : "elasticsearch", 
     "description": "Monitors Elasticsearch",
+    "command_lua" : "boundary-meter init.lua",
+    "postExtract_lua" : "",
     "command": "python -u plugin.py",
     "icon" : "icon.png",
     "metrics" : [
