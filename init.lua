@@ -32,7 +32,7 @@ function plugin:onParseValues(data)
   local parsed = json.parse(data)
 
   local result = {}
-  result['ELASTIC_SEARCH_STATUS'] = parsed.status
+  result['ELASTIC_SEARCH_STATUS'] = ((parsed.status == 'green') and 1) or 0
   result['ELASTIC_SEARCH_NODE_COUNT'] = parsed.nodes.count.total
   result['ELASTIC_SEARCH_INDEX_COUNT'] = parsed.indices.count
   result['ELASTIC_SEARCH_DOCUMENT_COUNT'] = parsed.indices.docs.count
