@@ -20,6 +20,7 @@ local Plugin = framework.Plugin
 local WebRequestDataSource = framework.WebRequestDataSource
 local pack = framework.util.pack
 local notEmpty = framework.string.notEmpty
+local isHttpSuccess = framework.util.isHttpSuccess
 
 local params = framework.params
 params.pollInterval = notEmpty(params.pollInterval, 1000)
@@ -28,7 +29,11 @@ options.wait_for_end = false
 local ds = WebRequestDataSource:new(options)
 
 local plugin = Plugin:new(params, ds)
-function plugin:onParseValues(data)
+function plugin:onParseValues(data, extra)
+  if not isHttpSuccess(extra.status_code) then
+    self:emitEvent('error', ('Http response status code %s instead of OK. Please check your elasetich endpoint configuration.'):format(extra.status_code))
+    return
+  end
   local parsed = json.parse(data)
 
   local result = {}
