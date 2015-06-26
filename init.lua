@@ -22,7 +22,7 @@ local pack = framework.util.pack
 
 local params = framework.params
 params.pollInterval = notEmpty(params.pollInterval, 1000)
-local options = url.parse(params.url)
+local options = url.parse(params.stats_url)
 options.wait_for_end = false
 local ds = WebRequestDataSource:new(options)
 
