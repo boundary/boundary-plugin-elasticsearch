@@ -1,5 +1,12 @@
 {
+    "name" : "Boundary Elastichsearch Plugin",
+    "version" : "0.9.1",
+    "meterVersionRequired" : "4.2.0-611",
+    "unsupportedPlatforms" : [ ],
+    "tags" : "elasticsearch", 
     "description": "Monitors Elasticsearch",
+    "command_lua" : "boundary-meter init.lua",
+    "postExtract_lua" : "",
     "command": "python -u plugin.py",
     "icon" : "icon.png",
     "metrics" : [
@@ -30,6 +37,19 @@
             "type": "string",
             "default": "http://127.0.0.1:9200/_cluster/stats",
             "required": true
+        },
+        {
+            "title" : "Source",
+            "name" : "source",
+            "description" : "The Source to display in the legend for the metrics data.  It will default to the hostname of the server",
+            "type" : "string"
+        },
+        {
+            "title": "Poll Interval (ms)",
+            "name": "pollInterval",
+            "description": "How often should the plugin poll (in milliseconds) for metrics.",
+            "type" : "integer",
+            "default" : 1000 
         }
     ]
 }
