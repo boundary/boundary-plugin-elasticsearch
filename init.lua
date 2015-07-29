@@ -21,6 +21,7 @@ local WebRequestDataSource = framework.WebRequestDataSource
 local pack = framework.util.pack
 local notEmpty = framework.string.notEmpty
 local isHttpSuccess = framework.util.isHttpSuccess
+local parseJson = framework.util.parseJson
 
 local params = framework.params
 params.pollInterval = notEmpty(params.pollInterval, 1000)
@@ -34,7 +35,7 @@ function plugin:onParseValues(data, extra)
     self:emitEvent('error', ('Http response status code %s instead of OK. Please check your elasticsearch endpoint configuration.'):format(extra.status_code))
     return
   end
-  local success, parsed = pcall(json.parse, data)
+  local success, parsed = parseJson(data)
   if not success then
     self:emitEvent('error', 'Could not parse metrics. Please check your elasticsearch endpoint configuration.')
     return
