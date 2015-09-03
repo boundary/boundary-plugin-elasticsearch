@@ -16,7 +16,7 @@ Collects metrics from Elasticsearch.
 ### Plugin Setup
 
 In order for the plugin to collect statistics from Elasticsearch, it needs access to the cluster stats API endpoint.
-In a default installation, this would be "http://127.0.0.1:9200/_cluster/stats", but the port or path may be
+In a default installation, this would be `http://127.0.0.1:9200/_cluster/stats`, but the port or path may be
 modified in configuration.
 
 ### Plugin Configuration Fields
@@ -31,20 +31,20 @@ modified in configuration.
 
 |Metric Name                 |Description                                         |
 |:---------------------------|:---------------------------------------------------|
-| ELASTIC_SEARCH_STATUS | |
-| ELASTIC_SEARCH_NODE_COUNT | |
-| ELASTIC_SEARCH_INDEX_COUNT | |
-| ELASTIC_SEARCH_DOCUMENT_COUNT | |
-| ELASTIC_SEARCH_STORE_SIZE | |
-| ELASTIC_SEARCH_SEGMENT_COUNT | |
-| ELASTIC_SEARCH_TOTAL_SHARDS | |
-| ELASTIC_SEARCH_PRIMARY_SHARDS | |
-| ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE | |
-| ELASTIC_SEARCH_FIELDDATA_EVICTIONS | |
-| ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE | |
-| ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS | |
-| ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE | |
-| ELASTIC_SEARCH_COMPLETION_SIZE | |
+| ELASTIC\_SEARCH\_STATUS | |
+| ELASTIC\_SEARCH\_NODE\_COUNT | |
+| ELASTIC\_SEARCH\_INDEX\_COUNT | |
+| ELASTIC\_SEARCH\_DOCUMENT\_COUNT | |
+| ELASTIC\_SEARCH\_STORE\_SIZE | |
+| ELASTIC\_SEARCH\_SEGMENT\_COUNT | |
+| ELASTIC\_SEARCH\_TOTAL\_SHARDS | |
+| ELASTIC\_SEARCH\_PRIMARY\_SHARDS | |
+| ELASTIC\_SEARCH\_FIELDDATA\_MEMORY\_SIZE | |
+| ELASTIC\_SEARCH\_FIELDDATA\_EVICTIONS | |
+| ELASTIC\_SEARCH\_FILTER\_CACHE\_MEMORY\_SIZE | |
+| ELASTIC\_SEARCH\_FILTER\_CACHE\_EVICTIONS | |
+| ELASTIC\_SEARCH\_ID\_CACHE\_MEMORY\_SIZE | |
+| ELASTIC\_SEARCH\_COMPLETION\_SIZE | |
 
 ### Dashboards
 
