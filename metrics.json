@@ -2,7 +2,7 @@
   "ELASTIC_SEARCH_COMPLETION_SIZE": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Number of completion suggestions returned",
     "displayName": "Elasticsearch - Completion Size",
     "displayNameShort": "ElSearch - Compl Sz",
     "unit": "bytecount"
@@ -10,7 +10,7 @@
   "ELASTIC_SEARCH_DOCUMENT_COUNT": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Number of documents in all indexes",
     "displayName": "Elasticsearch - Document Count",
     "displayNameShort": "ElSearch - Doc Cnt",
     "unit": "number"
@@ -18,7 +18,7 @@
   "ELASTIC_SEARCH_FIELDDATA_EVICTIONS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Number of field data dropped due to LRU (Least Recently Used) policy",
     "displayName": "Elasticsearch - Field Data Evictions",
     "displayNameShort": "ElSearch - FldDt Evc",
     "unit": "number"
@@ -26,7 +26,7 @@
   "ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Amount of memory in bytes used by the field data caches",
     "displayName": "Elasticsearch - Field Data Memory Size",
     "displayNameShort": "ElSearch - FldDt Mem",
     "unit": "bytecount"
@@ -34,7 +34,7 @@
   "ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Number of filters dropped due to LRU (Least Recently Used) policy",
     "displayName": "Elasticsearch - Filter Cache Evictions",
     "displayNameShort": "ElSearch - FltCh Evc",
     "unit": "number"
@@ -42,7 +42,7 @@
   "ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Amount of memory in bytes of the filter cache",
     "displayName": "Elasticsearch - Filter Cache Memory Size",
     "displayNameShort": "ElSearch - FltCh Mem",
     "unit": "bytecount"
@@ -50,7 +50,7 @@
   "ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Amount of memory in bytes of the id cache",
     "displayName": "Elasticsearch - ID Cache Memory Size",
     "displayNameShort": "ElSearch - IDCh Mem",
     "unit": "bytecount"
@@ -58,7 +58,7 @@
   "ELASTIC_SEARCH_INDEX_COUNT": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Number of indexes in the cluster",
     "displayName": "Elasticsearch - Index Count",
     "displayNameShort": "ElSearch - Indx Cnt",
     "unit": "number"
@@ -66,7 +66,7 @@
   "ELASTIC_SEARCH_NODE_COUNT": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Number of nodes in the cluster",
     "displayName": "Elasticsearch - Node Count",
     "displayNameShort": "ElSearch - Node Cnt",
     "unit": "number"
@@ -74,7 +74,7 @@
   "ELASTIC_SEARCH_PRIMARY_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Total number of primary shards",
     "displayName": "Elasticsearch - Primary Shards",
     "displayNameShort": "ElSearch - Prm Shard",
     "unit": "number"
@@ -82,7 +82,7 @@
   "ELASTIC_SEARCH_SEGMENT_COUNT": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Total number of segments in the cluster",
     "displayName": "Elasticsearch - Segment Count",
     "displayNameShort": "ElSearch - Segm Cnt",
     "unit": "number"
@@ -90,7 +90,7 @@
   "ELASTIC_SEARCH_STATUS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Current status of the cluster either: 1 green, or 0, either yellow or red",
     "displayName": "Elasticsearch - Status",
     "displayNameShort": "ElSearch - Clus Stat",
     "unit": "number"
@@ -98,7 +98,7 @@
   "ELASTIC_SEARCH_STORE_SIZE": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Amount of storage in bytes used by indexes",
     "displayName": "Elasticsearch - Store Size",
     "displayNameShort": "ElSearch - Store Sz",
     "unit": "bytecount"
@@ -106,7 +106,7 @@
   "ELASTIC_SEARCH_TOTAL_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Total number of shards",
     "displayName": "Elasticsearch - Total Shards",
     "displayNameShort": "ElSearch - Tot Shard",
     "unit": "number"
