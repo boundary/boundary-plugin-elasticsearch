@@ -47,6 +47,22 @@
     "displayNameShort": "ElSearch - FltCh Mem",
     "unit": "bytecount"
   },
+  "ELASTIC_SEARCH_QUERY_CACHE_EVICTIONS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Number of queries dropped due to LRU (Least Recently Used) policy",
+    "displayName": "Elasticsearch - Query Cache Evictions",
+    "displayNameShort": "ElSearch - QryCh Evc",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_QUERY_CACHE_MEMORY_SIZE": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Amount of memory in bytes of the query cache",
+    "displayName": "Elasticsearch - Query Cache Memory Size",
+    "displayNameShort": "ElSearch - QryCh Mem",
+    "unit": "bytecount"
+  },
   "ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
