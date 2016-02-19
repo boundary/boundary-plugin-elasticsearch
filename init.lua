@@ -52,9 +52,16 @@ function plugin:onParseValues(data, extra)
   result['ELASTIC_SEARCH_PRIMARY_SHARDS'] = parsed.indices.shards.primaries or 0.0
   result['ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE'] = parsed.indices.fielddata.memory_size_in_bytes
   result['ELASTIC_SEARCH_FIELDDATA_EVICTIONS'] = parsed.indices.fielddata.evictions
-  result['ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE'] = parsed.indices.filter_cache.memory_size_in_bytes
-  result['ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS'] = parsed.indices.filter_cache.evictions
-  result['ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE'] = parsed.indices.id_cache.memory_size_in_bytes
+  if parsed.indices.filter_cache ~= nil  then
+      result['ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE'] = parsed.indices.filter_cache.memory_size_in_bytes
+      result['ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS'] = parsed.indices.filter_cache.evictions
+  else
+      result['ELASTIC_SEARCH_QUERY_CACHE_MEMORY_SIZE'] = parsed.indices.query_cache.memory_size_in_bytes
+      result['ELASTIC_SEARCH_QUERY_CACHE_EVICTIONS'] = parsed.indices.query_cache.evictions
+  end
+  if parsed.indices.id_cache ~= nil then
+      result['ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE'] = parsed.indices.id_cache.memory_size_in_bytes
+  end
   result['ELASTIC_SEARCH_COMPLETION_SIZE'] = parsed.indices.completion.size_in_bytes
   return result
 end
