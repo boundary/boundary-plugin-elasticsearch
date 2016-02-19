@@ -42,16 +42,47 @@ function plugin:onParseValues(data, extra)
   end
 
   local result = {}
-  result['ELASTIC_SEARCH_STATUS'] = ((parsed.status == 'green') and 1) or 0
-  result['ELASTIC_SEARCH_NODE_COUNT'] = parsed.nodes.count.total
-  result['ELASTIC_SEARCH_INDEX_COUNT'] = parsed.indices.count
-  result['ELASTIC_SEARCH_DOCUMENT_COUNT'] = parsed.indices.docs.count
-  result['ELASTIC_SEARCH_STORE_SIZE'] = parsed.indices.store.size_in_bytes
-  result['ELASTIC_SEARCH_SEGMENT_COUNT'] = parsed.indices.segments.count
-  result['ELASTIC_SEARCH_TOTAL_SHARDS'] = parsed.indices.shards.total or 0.0
-  result['ELASTIC_SEARCH_PRIMARY_SHARDS'] = parsed.indices.shards.primaries or 0.0
-  result['ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE'] = parsed.indices.fielddata.memory_size_in_bytes
-  result['ELASTIC_SEARCH_FIELDDATA_EVICTIONS'] = parsed.indices.fielddata.evictions
+   if parsed.status ~= nil then
+        result['ELASTIC_SEARCH_STATUS'] = ((parsed.status == 'green') and 1) or 0
+  end
+
+  if parsed.nodes.count.total ~= nil then
+        result['ELASTIC_SEARCH_NODE_COUNT'] = parsed.nodes.count.total
+  end
+
+  if parsed.indices.count ~= nil then
+        result['ELASTIC_SEARCH_INDEX_COUNT'] = parsed.indices.count
+  end
+
+  if parsed.indices.docs.count ~= nil then
+        result['ELASTIC_SEARCH_DOCUMENT_COUNT'] = parsed.indices.docs.count
+  end
+
+  if parsed.indices.store.size_in_bytes ~= nil then
+        result['ELASTIC_SEARCH_STORE_SIZE'] = parsed.indices.store.size_in_bytes
+  end
+
+  if parsed.indices.segments.count ~= nil then
+        result['ELASTIC_SEARCH_SEGMENT_COUNT'] = parsed.indices.segments.count
+  end
+
+  if parsed.indices.shards ~= nil then
+        if parsed.indices.shards.total ~= nil then
+                result['ELASTIC_SEARCH_TOTAL_SHARDS'] = parsed.indices.shards.total or 0.0
+        end
+        if parsed.indices.shards.primaries ~= nil then
+                result['ELASTIC_SEARCH_PRIMARY_SHARDS'] = parsed.indices.shards.primaries or 0.0
+        end
+  end
+  if parsed.indices.fielddata ~= nil then
+        if parsed.indices.fielddata.memory_size_in_bytes ~= nil then
+                result['ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE'] = parsed.indices.fielddata.memory_size_in_bytes
+        end
+        if parsed.indices.fielddata.evictions ~= nil then
+                result['ELASTIC_SEARCH_FIELDDATA_EVICTIONS'] = parsed.indices.fielddata.evictions
+        end
+  end
+
   if parsed.indices.filter_cache ~= nil  then
       result['ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE'] = parsed.indices.filter_cache.memory_size_in_bytes
       result['ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS'] = parsed.indices.filter_cache.evictions
