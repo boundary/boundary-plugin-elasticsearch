@@ -43,8 +43,8 @@ modified in configuration.
 | ELASTIC\_SEARCH\_FIELDDATA\_EVICTIONS        | Number of field data dropped due to LRU (Least Recently Used) policy     |
 | ELASTIC\_SEARCH\_FILTER\_CACHE\_MEMORY\_SIZE | Amount of memory in bytes of the filter cache                            |
 | ELASTIC\_SEARCH\_FILTER\_CACHE\_EVICTIONS    | Number of filters dropped due to LRU (Least Recently Used) policy        |
-| ELASTIC\_SEARCH\_QUERY\_CACHE\_MEMORY\_SIZE  | Amount of memory in bytes of the Query cache (added for ES 2.x )         |
-| ELASTIC\_SEARCH\_QUERY\_CACHE\_EVICTIONS     | Number of Queries dropped due to LRU (Least Recently Used) policy ( added for ES 2.x )        |
+| ELASTIC\_SEARCH\_QUERY\_CACHE\_MEMORY\_SIZE  | Amount of memory in bytes of the Query cache (added for Elasticsearch 2.x )         |
+| ELASTIC\_SEARCH\_QUERY\_CACHE\_EVICTIONS     | Number of Queries dropped due to LRU (Least Recently Used) policy ( added for Elasticsearch 2.x )        |
 | ELASTIC\_SEARCH\_ID\_CACHE\_MEMORY\_SIZE     | Amount of memory in bytes of the id cache                                |
 | ELASTIC\_SEARCH\_COMPLETION\_SIZE            | Number of completion suggestions returned                                |
 
