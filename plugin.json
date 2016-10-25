@@ -25,40 +25,85 @@
         "ELASTIC_SEARCH_QUERY_CACHE_MEMORY_SIZE",
         "ELASTIC_SEARCH_QUERY_CACHE_EVICTIONS",
         "ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE",
-        "ELASTIC_SEARCH_COMPLETION_SIZE"],
+        "ELASTIC_SEARCH_COMPLETION_SIZE",
+	"ELASTIC_SEARCH_NO_OF_NODES",
+	"ELASTIC_SEARCH_NO_OF_DATA_NODES",
+	"ELASTIC_SEARCH_ACTIVE_PRIMARY_SHARDS",
+	"ELASTIC_SEARCH_ACTIVE_SHARDS",
+	"ELASTIC_SEARCH_RELOCATING_SHARDS",
+	"ELASTIC_SEARCH_INITIALISING_SHARDS",
+	"ELASTIC_SEARCH_UNASSIGNED_SHARDS",
+	"ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS",
+	"ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT",
+	"ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS",
+	"ELASTIC_SEARCH_PROCESS_MAX_FILE_DESCRIPTORS",
+	"ELASTIC_SEARCH_FS_DATA_AVAILABLE_IN_BYTES",
+	"ELASTIC_SEARCH_BREAKERS_FIELDDATA_TRIPPED"],
 
     "dashboards" : [
     	{
-    	    "name" : "Elasticsearch v2",
+    	    "name" : "ES ClusterStats v2",
             "layout" : "d-w=3&d-h=5&d-pad=5&d-light=0&d-bg=none&d-g-ELASTIC_SEARCH_STATUS=0-0-1-1&d-g-ELASTIC_SEARCH_COMPLETION_SIZE=1-0-1-1&d-g-ELASTIC_SEARCH_FIELDDATA_EVICTIONS=0-1-1-1&d-g-ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE=0-2-1-1&d-g-ELASTIC_SEARCH_INDEX_COUNT=0-3-1-1&d-g-ELASTIC_SEARCH_NODE_COUNT=1-3-1-1&d-g-ELASTIC_SEARCH_DOCUMENT_COUNT=2-3-1-1&d-g-ELASTIC_SEARCH_PRIMARY_SHARDS=2-0-1-1&d-g-ELASTIC_SEARCH_TOTAL_SHARDS=0-4-1-1&d-g-ELASTIC_SEARCH_STORE_SIZE=2-4-1-1&d-g-ELASTIC_SEARCH_SEGMENT_COUNT=1-4-1-1&d-g-ELASTIC_SEARCH_QUERY_CACHE_EVICTIONS=1-1-2-1&d-g-ELASTIC_SEARCH_QUERY_CACHE_MEMORY_SIZE=1-2-2-1" 
     	},
     	{
-    	    "name" : "Elasticsearch",
+    	    "name" : "ES ClusterStats",
             "layout" : "d-w=4&d-h=4&d-pad=5&d-light=0&d-bg=none&d-g-ELASTIC_SEARCH_STATUS=0-0-1-1&d-g-ELASTIC_SEARCH_COMPLETION_SIZE=1-0-1-1&d-g-ELASTIC_SEARCH_FIELDDATA_EVICTIONS=0-1-1-1&d-g-ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE=0-2-1-1&d-g-ELASTIC_SEARCH_INDEX_COUNT=0-3-1-1&d-g-ELASTIC_SEARCH_NODE_COUNT=1-3-1-1&d-g-ELASTIC_SEARCH_DOCUMENT_COUNT=2-3-1-1&d-g-ELASTIC_SEARCH_PRIMARY_SHARDS=2-0-1-1&d-g-ELASTIC_SEARCH_SEGMENT_COUNT=2-1-1-1&d-g-ELASTIC_SEARCH_STORE_SIZE=3-0-1-1&d-g-ELASTIC_SEARCH_TOTAL_SHARDS=3-3-1-1&d-g-ELASTIC_SEARCH_FILTER_CACHE_EVICTIONS=1-1-1-1&d-g-ELASTIC_SEARCH_FILTER_CACHE_MEMORY_SIZE=1-2-1-1&d-g-ELASTIC_SEARCH_ID_CACHE_MEMORY_SIZE=2-2-1-1" 
-    	}
+    	},
+        {
+    	    "name" : "ES ClusterHealth",
+            "layout" :"d-w=4&d-h=2&d-pad=5&d-light=1&d-bg=none&d-g-ELASTIC_SEARCH_NO_OF_NODES=0-0-1-1&d-g-ELASTIC_SEARCH_NO_OF_DATA_NODES=1-0-1-1&d-g-ELASTIC_SEARCH_ACTIVE_SHARDS=0-1-1-1&d-g-ELASTIC_SEARCH_RELOCATING_SHARDS=1-1-1-1&d-g-ELASTIC_SEARCH_INITIALISING_SHARDS=2-1-1-1&d-g-ELASTIC_SEARCH_UNASSIGNED_SHARDS=3-0-1-1&d-g-ELASTIC_SEARCH_PRIMARY_SHARDS=2-0-1-1"
+	},
+	{
+    	    "name" : "ES NodesStats",
+	    "layout" : "d-w=3&d-h=2&d-pad=5&d-light=1&d-bg=none&d-g-ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS=0-0-1-1&d-g-ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS=2-0-1-1&d-g-ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT=1-0-1-1&d-g-ELASTIC_SEARCH_PROCESS_MAX_FILE_DESCRIPTORS=0-1-1-1&d-g-ELASTIC_SEARCH_FS_DATA_AVAILABLE_IN_BYTES=1-1-1-1&d-g-ELASTIC_SEARCH_BREAKERS_FIELDDATA_TRIPPED=2-1-1-1"
+	}
     	],
+    "paramArray": {
+        "itemTitle": [
+        "host","port", "source"
+        ],
+        "schemaTitle": "Instance"
+     },
     "paramSchema": [
         {
-            "title": "Elasticsearch Stats URL",
-            "name": "stats_url",
-            "description": "The URL to Elasticsearch's cluster stats API endpoint",
+            "title": "Name",
+            "name": "name",
+            "description": "A name to identify ES instance",
             "type": "string",
-            "default": "http://127.0.0.1:9200/_cluster/stats",
+            "default": "ElasticSearch",
             "required": true
         },
         {
-            "title": "Poll Interval (ms)",
-            "name": "pollInterval",
-            "description": "How often should the plugin poll (in milliseconds) for metrics.",
-            "type" : "integer",
-            "default" : 1000 
+            "title": "Host",
+            "name": "host",
+            "description": "The host of ElasticSearch node",
+            "type" : "string",
+            "default" : "127.0.0.1",
+	    "required" : true 
         },
         {
-            "title" : "Source",
-            "name" : "source",
-            "description" : "The Source to display in the legend for the metrics data.  It will default to the hostname of the server",
-            "type" : "string",
+            "title" : "Port",
+            "name" : "port",
+            "description" : "The port of ElasticSearch node",
+            "type" : "integer",
+	    "default" : 9200,
 	    "required" : false
-        }
+        },
+	{
+        	"title": "Poll Interval (ms)",
+        	"name": "pollInterval",
+        	"description": "How often (in milliseconds) to poll for metrics.",
+        	"type" : "integer",
+        	"default" : 1000,
+        	"required" : true
+	},
+	{
+ 	       "title" : "Source",
+        	"name" : "source",
+        	"description" : "The Source to display in the legend for the metrics data.  It will default to the hostname of the server",
+        	"type" : "string",
+        	"default" : "",
+        	"required" : false 
+	}
     ]
 }
