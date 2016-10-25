@@ -126,5 +126,109 @@
     "displayName": "Elasticsearch - Total Shards",
     "displayNameShort": "ElSearch - Tot Shard",
     "unit": "number"
+  },
+  "ELASTIC_SEARCH_NO_OF_NODES": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Total number of nodes",
+    "displayName": "Elasticsearch - Total nodes",
+    "displayNameShort": "ElSearch - Tot nodes",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_NO_OF_DATA_NODES": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Total number of data nodes",
+    "displayName": "Elasticsearch - Total data nodes",
+    "displayNameShort": "ElSearch - Tot data nodes",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_ACTIVE_PRIMARY_SHARDS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Number of active primary shards",
+    "displayName": "Elasticsearch - Active primary shards",
+    "displayNameShort": "ElSearch - active prim shards",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_ACTIVE_SHARDS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Number of active shards",
+    "displayName": "Elasticsearch - Active shards",
+    "displayNameShort": "ElSearch - active shards",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_RELOCATING_SHARDS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Number of relocating shards",
+    "displayName": "Elasticsearch - relocating shards",
+    "displayNameShort": "ElSearch - relocating shards",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_INITIALISING_SHARDS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Number of initialising shards",
+    "displayName": "Elasticsearch - initialising shards",
+    "displayNameShort": "ElSearch - initialising shards",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_UNASSIGNED_SHARDS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Number of unassigned shards",
+    "displayName": "Elasticsearch - unassigned shards",
+    "displayNameShort": "ElSearch - unassigned shards",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "JVM uptime",
+    "displayName": "Elasticsearch - JVM uptime",
+    "displayNameShort": "ElSearch - JVM uptime",
+    "unit": "duration"
+  },
+  "ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "JVM Heap memory used percentage",
+    "displayName": "Elasticsearch - JVM Heap memory used percentage",
+    "displayNameShort": "ElSearch - JVM heap mem used percent",
+    "unit": "percent"
+  },
+  "ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Process open file descriptors",
+    "displayName": "Elasticsearch - Process open file descriptors",
+    "displayNameShort": "ElSearch - Process open file descriptors",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_PROCESS_MAX_FILE_DESCRIPTORS": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Process max file descriptors",
+    "displayName": "Elasticsearch - Process max file descriptors",
+    "displayNameShort": "ElSearch - Process max file descriptors",
+    "unit": "number"
+  },
+  "ELASTIC_SEARCH_FS_DATA_AVAILABLE_IN_BYTES": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "FS data available",
+    "displayName": "Elasticsearch - FS data available",
+    "displayNameShort": "ElSearch - FS data available",
+    "unit": "bytecount"
+  },
+  "ELASTIC_SEARCH_BREAKERS_FIELDDATA_TRIPPED": {
+    "defaultAggregate": "avg",
+    "defaultResolutionMS": 1000,
+    "description": "Breakers field data tripped",
+    "displayName": "Elasticsearch - Breakers field data tripped",
+    "displayNameShort": "ElSearch - Breakers field data tripped",
+    "unit": "number"
   }
 }
