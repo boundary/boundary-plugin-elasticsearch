@@ -35,7 +35,7 @@ local function createOptions(item)
 	local options = {}
 	options.host = item.host
 	options.port = item.port
-	options.wait_for_end = false
+	options.wait_for_end = true
 
 	return options
 end
