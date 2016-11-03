@@ -21,8 +21,9 @@ In order for the plugin to collect statistics from Elasticsearch, it needs acces
 
 |Field Name    | Description                                                                                              |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
-|Source        | The Source to display in the legend for the haproxy data.  It will default to the hostname of the server.|
-|Statistics URL| The URL endpoint of where the elasticsearch statistics are hosted.                                       |
+|Source        | The Source to display in the legend for the elastic search data.It will default to the hostname of the server.|
+|Host          | The Elastic Search hostname or IP.                                                                       |
+|Port          | The Elastic Search port.                                                                                 |
 |Poll Interval | How often should the plugin poll for metrics.                                                            |
 
 ### Metrics Collected
@@ -45,11 +46,26 @@ In order for the plugin to collect statistics from Elasticsearch, it needs acces
 | ELASTIC\_SEARCH\_QUERY\_CACHE\_EVICTIONS     | Number of Queries dropped due to LRU (Least Recently Used) policy ( added for Elasticsearch 2.x )        |
 | ELASTIC\_SEARCH\_ID\_CACHE\_MEMORY\_SIZE     | Amount of memory in bytes of the id cache                                |
 | ELASTIC\_SEARCH\_COMPLETION\_SIZE            | Number of completion suggestions returned                                |
+| ELASTIC\_SEARCH\_NO\_OF\_NODES               | Number of Nodes                                                          |
+| ELASTIC\_SEARCH\_NO\_OF\_DATA\_NODES         | Number of Data Nodes                                                     |
+| ELASTIC\_SEARCH\_ACTIVE\_PRIMARY\_SHARDS     | Number of Active Primary Shards                                          |
+| ELASTIC\_SEARCH\_ACTIVE\_SHARDS              | Number of  Active Shards                                                 |
+| ELASTIC\_SEARCH\_RELOCATING\_SHARDS          | Number of Relocating Shards                                              |
+| ELASTIC\_SEARCH\_INITIALISING\_SHARDS        | Number of Initialising Shards                                            |
+| ELASTIC\_SEARCH\_UNASSIGNED\_SHARDS          | Number of Unassigned Shards                                              |
+| ELASTIC\_SEARCH\_JVM\_UPTIME\_IN\_MILLIS     | JVM uptime in milliseconds                                               |
+| ELASTIC\_SEARCH\_JVM\_MEM\_HEAP\_USED\_PERCENT| JVM heap memory used percent                                            |
+| ELASTIC\_SEARCH\_PROCESS\_OPEN\_FILE\_DESCRIPTORS | Process open file descriptors                                       |
+| ELASTIC\_SEARCH\_PROCESS\_MAX\_FILE\_DESCRIPTORS | Process max file descriptors                                         |
+| ELASTIC\_SEARCH\_FS\_DATA\_AVAILABLE\_IN\_BYTES | FS data available in bytes                                            |
+| ELASTIC\_SEARCH\_BREAKERS\_FIELDDATA\_TRIPPED | Breakers field data tripped                                             |
 
 ### Dashboards
 
-- Elasticsearch
-- Elasticsearch v2
+- ES ClusterStats
+- ES ClusterStats v2
+- ES ClusterHealth
+- ES NodesStats
 
 ### References
 
