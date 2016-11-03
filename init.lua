@@ -183,7 +183,7 @@ local function nodesStatsExtractor (data, item)
 		metric('ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT',node.jvm.mem.heap_used_percent,nil,src)
 		metric('ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS',node.process.open_file_descriptors,nil,src)
 		metric('ELASTIC_SEARCH_PROCESS_MAX_FILE_DESCRIPTORS',node.process.max_file_descriptors,nil,src)
-		if node.fs.data[1].available_in_bytes ~= nil  then
+		if #node.fs.data>0 and  node.fs.data[1].available_in_bytes ~= nil  then
 			metric('ELASTIC_SEARCH_FS_DATA_AVAILABLE_IN_BYTES',node.fs.data[1].available_in_bytes,nil,src)
         	end
 		metric('ELASTIC_SEARCH_BREAKERS_FIELDDATA_TRIPPED',node.breakers.fielddata.tripped,nil,src)
