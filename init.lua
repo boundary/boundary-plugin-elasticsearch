@@ -180,7 +180,7 @@ local function nodesStatsExtractor (data, item)
         for _,node in pairs(data.nodes) do
 		local src = data.cluster_name .. ".Node-" .. node.name
 		metric('ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS',node.jvm.uptime_in_millis,nil,src)
-		metric('ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT',node.jvm.mem.heap_used_percent,nil,src)
+		metric('ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT',(node.jvm.mem.heap_used_percent/100),nil,src)
 		metric('ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS',node.process.open_file_descriptors,nil,src)
 		metric('ELASTIC_SEARCH_PROCESS_MAX_FILE_DESCRIPTORS',node.process.max_file_descriptors,nil,src)
 		if #node.fs.data>0 and  node.fs.data[1].available_in_bytes ~= nil  then
