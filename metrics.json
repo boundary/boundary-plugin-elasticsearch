@@ -148,39 +148,39 @@
     "defaultResolutionMS": 1000,
     "description": "Number of active primary shards",
     "displayName": "Elasticsearch - Active primary shards",
-    "displayNameShort": "ElSearch - active prim shards",
+    "displayNameShort": "ElSearch - Active Prim Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_ACTIVE_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of active shards",
-    "displayName": "Elasticsearch - Active shards",
-    "displayNameShort": "ElSearch - active shards",
+    "displayName": "Elasticsearch - Active Shards",
+    "displayNameShort": "ElSearch - Active Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_RELOCATING_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of relocating shards",
-    "displayName": "Elasticsearch - relocating shards",
-    "displayNameShort": "ElSearch - relocating shards",
+    "displayName": "Elasticsearch - Relocating Shards",
+    "displayNameShort": "ElSearch - Relocating Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_INITIALISING_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of initialising shards",
-    "displayName": "Elasticsearch - initialising shards",
-    "displayNameShort": "ElSearch - initialising shards",
+    "displayName": "Elasticsearch - Initialising Shards",
+    "displayNameShort": "ElSearch - Initialising Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_UNASSIGNED_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of unassigned shards",
-    "displayName": "Elasticsearch - unassigned shards",
-    "displayNameShort": "ElSearch - unassigned shards",
+    "displayName": "Elasticsearch - Unassigned Shards",
+    "displayNameShort": "ElSearch - Unassigned Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS": {
