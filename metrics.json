@@ -124,111 +124,111 @@
     "defaultResolutionMS": 1000,
     "description": "Total number of shards",
     "displayName": "Elasticsearch - Total Shards",
-    "displayNameShort": "ElSearch - Tot Shard",
+    "displayNameShort": "ElSearch - Tot Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_NO_OF_NODES": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Total number of nodes",
-    "displayName": "Elasticsearch - Total nodes",
-    "displayNameShort": "ElSearch - Tot nodes",
+    "displayName": "Elasticsearch - Total Nodes",
+    "displayNameShort": "ElSearch - Tot Nodes",
     "unit": "number"
   },
   "ELASTIC_SEARCH_NO_OF_DATA_NODES": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Total number of data nodes",
-    "displayName": "Elasticsearch - Total data nodes",
-    "displayNameShort": "ElSearch - Tot data nodes",
+    "displayName": "Elasticsearch - Total Data Nodes",
+    "displayNameShort": "ElSearch - Tot Data Nodes",
     "unit": "number"
   },
   "ELASTIC_SEARCH_ACTIVE_PRIMARY_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of active primary shards",
-    "displayName": "Elasticsearch - Active primary shards",
-    "displayNameShort": "ElSearch - active prim shards",
+    "displayName": "Elasticsearch - Active Primary Shards",
+    "displayNameShort": "ElSearch - Active Prim Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_ACTIVE_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of active shards",
-    "displayName": "Elasticsearch - Active shards",
-    "displayNameShort": "ElSearch - active shards",
+    "displayName": "Elasticsearch - Active Shards",
+    "displayNameShort": "ElSearch - Active Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_RELOCATING_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of relocating shards",
-    "displayName": "Elasticsearch - relocating shards",
-    "displayNameShort": "ElSearch - relocating shards",
+    "displayName": "Elasticsearch - Relocating Shards",
+    "displayNameShort": "ElSearch - Relocating Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_INITIALISING_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of initialising shards",
-    "displayName": "Elasticsearch - initialising shards",
-    "displayNameShort": "ElSearch - initialising shards",
+    "displayName": "Elasticsearch - Initialising Shards",
+    "displayNameShort": "ElSearch - Initialising Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_UNASSIGNED_SHARDS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Number of unassigned shards",
-    "displayName": "Elasticsearch - unassigned shards",
-    "displayNameShort": "ElSearch - unassigned shards",
+    "displayName": "Elasticsearch - Unassigned Shards",
+    "displayNameShort": "ElSearch - Unassigned Shards",
     "unit": "number"
   },
   "ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "JVM uptime",
-    "displayName": "Elasticsearch - JVM uptime",
-    "displayNameShort": "ElSearch - JVM uptime",
+    "displayName": "Elasticsearch - JVM Uptime",
+    "displayNameShort": "ElSearch - JVM Uptime",
     "unit": "duration"
   },
   "ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "JVM Heap memory used percentage",
-    "displayName": "Elasticsearch - JVM Heap memory used percentage",
-    "displayNameShort": "ElSearch - JVM heap mem used percent",
+    "displayName": "Elasticsearch - JVM Heap Memory Used Percentage",
+    "displayNameShort": "ElSearch - JVM Heap Mem Used Percent",
     "unit": "percent"
   },
   "ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Process open file descriptors",
-    "displayName": "Elasticsearch - Process open file descriptors",
-    "displayNameShort": "ElSearch - Process open file descriptors",
+    "displayName": "Elasticsearch - Process Open File Descriptors",
+    "displayNameShort": "ElSearch - Process Open File Descriptors",
     "unit": "number"
   },
   "ELASTIC_SEARCH_PROCESS_MAX_FILE_DESCRIPTORS": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Process max file descriptors",
-    "displayName": "Elasticsearch - Process max file descriptors",
-    "displayNameShort": "ElSearch - Process max file descriptors",
+    "displayName": "Elasticsearch - Process Max File Descriptors",
+    "displayNameShort": "ElSearch - Process Max File Descriptors",
     "unit": "number"
   },
   "ELASTIC_SEARCH_FS_DATA_AVAILABLE_IN_BYTES": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "FS data available",
-    "displayName": "Elasticsearch - FS data available",
-    "displayNameShort": "ElSearch - FS data available",
+    "displayName": "Elasticsearch - FS Data Available",
+    "displayNameShort": "ElSearch - FS Data Available",
     "unit": "bytecount"
   },
   "ELASTIC_SEARCH_BREAKERS_FIELDDATA_TRIPPED": {
     "defaultAggregate": "avg",
     "defaultResolutionMS": 1000,
     "description": "Breakers field data tripped",
-    "displayName": "Elasticsearch - Breakers field data tripped",
-    "displayNameShort": "ElSearch - Breakers field data tripped",
+    "displayName": "Elasticsearch - Breakers Field Data Tripped",
+    "displayNameShort": "ElSearch - Breakers Field Data Tripped",
     "unit": "number"
   }
 }
