@@ -218,7 +218,7 @@ function plugin:onParseValues(data, extra)
 
 	local key, item = unpack(extra.info)
 	local extractor = extractors_map[key]
-	return extractor(data, item, extra.source))
+	return extractor(data, item, extra.source)
 
 end
 
