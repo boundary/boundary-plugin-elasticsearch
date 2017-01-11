@@ -14,7 +14,6 @@
 
 --Framework imports.
 local framework = require('framework')
-local json = require('json')
 
 local Plugin = framework.Plugin
 local WebRequestDataSource = framework.WebRequestDataSource
