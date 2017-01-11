@@ -37,7 +37,6 @@ local function createOptions(item)
 	options.host = item.host
 	options.port = item.port
 	options.wait_for_end = true
-  options.source = item.source --@vitiwari source name 
 	return options
 end
 
@@ -90,11 +89,11 @@ local function createPollers(params)
 	return pollers
 end
 
-local function clusterStatsExtractor (data, item, source)
+local function clusterStatsExtractor (data, item)
 	local result = {}
 	local metric = function (...) ipack(result, ...) end
 
-	local src = notEmpty(source,data.cluster_name)
+	local src = notEmpty(item.source,data.cluster_name)
 	
 	if data.status ~= nil then
 		if data.status == 'green' then
@@ -158,10 +157,10 @@ local function clusterStatsExtractor (data, item, source)
 	return result
 end
 
-local function clusterHealthExtractor (data, item,source)
+local function clusterHealthExtractor (data, item)
         local result = {}
         local metric = function (...) ipack(result, ...) end
-	      local src = notEmpty(source,data.cluster_name)
+	      local src = notEmpty(item.source,data.cluster_name)
 
 
 	metric('ELASTIC_SEARCH_NO_OF_NODES',data.number_of_nodes,nil,src)
@@ -174,12 +173,12 @@ local function clusterHealthExtractor (data, item,source)
         return result
 end
 
-local function nodesStatsExtractor (data, item, source)
+local function nodesStatsExtractor (data, item)
         local result = {}
         local metric = function (...) ipack(result, ...) end
 
         for _,node in pairs(data.nodes) do
-		local src = notEmpty(source,data.cluster_name) .. ".Node-" .. node.name
+		local src = notEmpty(item.source,data.cluster_name) .. ".Node-" .. node.name
 		metric('ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS',node.jvm.uptime_in_millis,nil,src)
 		metric('ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT',(node.jvm.mem.heap_used_percent/100),nil,src)
 		metric('ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS',node.process.open_file_descriptors,nil,src)
@@ -217,7 +216,7 @@ function plugin:onParseValues(data, extra)
 
 	local key, item = unpack(extra.info)
 	local extractor = extractors_map[key]
-	return extractor(data, item, extra.source)
+	return extractor(data, item)
 
 end
 
