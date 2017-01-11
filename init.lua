@@ -22,6 +22,7 @@ local PollerCollection = framework.PollerCollection
 local isHttpSuccess = framework.util.isHttpSuccess
 local ipack = framework.util.ipack
 local parseJson = framework.util.parseJson
+local notEmpty = framework.string.notEmpty
 
 --Getting the parameters from params.json.
 local params = framework.params
@@ -36,7 +37,6 @@ local function createOptions(item)
 	options.host = item.host
 	options.port = item.port
 	options.wait_for_end = true
-
 	return options
 end
 
@@ -93,7 +93,7 @@ local function clusterStatsExtractor (data, item)
 	local result = {}
 	local metric = function (...) ipack(result, ...) end
 
-	local src = data.cluster_name
+	local src = notEmpty(item.source,data.cluster_name)
 	
 	if data.status ~= nil then
 		if data.status == 'green' then
@@ -160,7 +160,7 @@ end
 local function clusterHealthExtractor (data, item)
         local result = {}
         local metric = function (...) ipack(result, ...) end
-	local src = data.cluster_name
+	      local src = notEmpty(item.source,data.cluster_name)
 
 
 	metric('ELASTIC_SEARCH_NO_OF_NODES',data.number_of_nodes,nil,src)
@@ -178,7 +178,7 @@ local function nodesStatsExtractor (data, item)
         local metric = function (...) ipack(result, ...) end
 
         for _,node in pairs(data.nodes) do
-		local src = data.cluster_name .. ".Node-" .. node.name
+		local src = notEmpty(item.source,data.cluster_name) .. ".Node-" .. node.name
 		metric('ELASTIC_SEARCH_JVM_UPTIME_IN_MILLIS',node.jvm.uptime_in_millis,nil,src)
 		metric('ELASTIC_SEARCH_JVM_MEM_HEAP_USED_PERCENT',(node.jvm.mem.heap_used_percent/100),nil,src)
 		metric('ELASTIC_SEARCH_PROCESS_OPEN_FILE_DESCRIPTORS',node.process.open_file_descriptors,nil,src)
