@@ -94,7 +94,7 @@
         	"name": "pollInterval",
         	"description": "How often (in milliseconds) to poll for metrics.",
         	"type" : "integer",
-        	"default" : 1000,
+        	"default" : 15000,
         	"required" : true
 	},
 	{
