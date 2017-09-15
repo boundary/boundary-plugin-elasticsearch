@@ -132,9 +132,6 @@ local function clusterStatsExtractor (data, item)
         	end
   	end
   	if data.indices.fielddata ~= nil then
-        	if data.indices.fielddata.memory_size_in_bytes ~= nil then
-                	metric('ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE', data.indices.fielddata.memory_size_in_bytes,nil,src)
-        	end
         	if data.indices.fielddata.evictions ~= nil then
                 	metric('ELASTIC_SEARCH_FIELDDATA_EVICTIONS', data.indices.fielddata.evictions,nil,src)
         	end
@@ -187,6 +184,9 @@ local function nodesStatsExtractor (data, item)
 			metric('ELASTIC_SEARCH_FS_DATA_AVAILABLE_IN_BYTES',node.fs.data[1].available_in_bytes,nil,src)
         	end
 		metric('ELASTIC_SEARCH_BREAKERS_FIELDDATA_TRIPPED',node.breakers.fielddata.tripped,nil,src)
+	        if node.indices.fielddata.memory_size_in_bytes ~= nil then
+                        metric('ELASTIC_SEARCH_FIELDDATA_MEMORY_SIZE', node.indices.fielddata.memory_size_in_bytes,nil,src)
+            	end
 	end
         return result
 end
