@@ -24,8 +24,18 @@ local ipack = framework.util.ipack
 local parseJson = framework.util.parseJson
 local notEmpty = framework.string.notEmpty
 
---Getting the parameters from params.json.
-local params = framework.params
+--Changes done for Securing parameters.
+--local params = framework.params
+local json = require('json')
+local env = require('env')
+
+local params = env.get("TSP_PLUGIN_PARAMS")
+if(params == nil or  params == '') then
+   params = framework.params
+else
+   params = json.parse(params)
+end
+-- End changes for Security parameters.
 
 local CLUSTER_STATS = 'cluster_stats'
 local CLUSTER_HEALTH = 'cluster_health'
